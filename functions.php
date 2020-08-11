@@ -10,10 +10,12 @@ register_nav_menu('footer','en pied du menu');
 function montheme_register_asset()
 {
 wp_register_style('bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
 wp_register_script('bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js',['popper','jquery'],false,true);
 wp_register_script('popper','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',[],false,true);
 wp_deregister_script('jquery');
 wp_register_script('jquery','https://code.jquery.com/jquery-3.3.1.slim.min.js',[],false,true);
+wp_enqueue_style( 'style');
 wp_enqueue_style( 'bootstrap' );
 wp_enqueue_script('bootstrap');
 }
